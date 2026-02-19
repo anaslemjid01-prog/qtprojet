@@ -6,23 +6,863 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1041</width>
+    <height>654</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>PORT FISHING MANAGEMENT</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="styleSheet">
+   <string notr="true">/* ============================================
+   PORT FISHING MANAGEMENT - PREMIUM DESIGN
+   Ocean Blue Gradient Theme with Modern Elements
+============================================ */
+
+/* ========== POLICE DE CARACTÈRES ========== */
+* {
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+/* ========== FENÊTRE PRINCIPALE ========== */
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #0c2461, stop:0.3 #1a5276, stop:1 #1e3799);
+    border: none;
+}
+
+/* ========== WIDGET CENTRAL ========== */
+QWidget#centralwidget {
+    background: transparent;
+}
+
+/* ========== GROUPBOX STYLE ========== */
+QGroupBox {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(26, 82, 118, 0.3);
+    border-radius: 15px;
+    margin-top: 10px;
+    padding-top: 20px;
+    font-weight: 700;
+    color: #0c2461;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 8px 30px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #1e3799, stop:1 #4a69bd);
+    color: white;
+    border-radius: 12px;
+    margin-top: -25px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Form GroupBox */
+QGroupBox#groupBox {
+    background: rgba(255, 255, 255, 0.98);
+    border: 2px solid #3498db;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Table GroupBox */
+QGroupBox#groupBox_2 {
+    background: rgba(255, 255, 255, 0.98);
+    border: 2px solid #2c3e50;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ========== LABELS STYLE ========== */
+QLabel {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 4px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QLabel#label, QLabel#label_2, QLabel#label_3,
+QLabel#label_4, QLabel#label_5, QLabel#label_6 {
+    color: #1a5276;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+QLabel#label_7 {
+    color: #0c2461;
+    font-size: 16px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(26, 82, 118, 0.2);
+}
+
+/* ========== INPUT FIELDS ========== */
+QLineEdit {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(52, 152, 219, 0.5);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #2c3e50;
+    selection-background-color: #3498db;
+    selection-color: white;
+    font-weight: 500;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1a5276;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(26, 82, 118, 0.2);
+}
+
+QLineEdit:hover {
+    border: 2px solid #2980b9;
+    background-color: white;
+}
+
+QLineEdit#lineEdit_5 {
+    background-color: rgba(232, 244, 252, 0.9);
+    border: 2px solid #3498db;
+    font-style: italic;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+
+/* ========== COMBOBOX ========== */
+QComboBox {
+    background-color: white;
+    border: 2px solid rgba(52, 152, 219, 0.5);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #2c3e50;
+    min-height: 35px;
+    font-weight: 500;
+}
+
+QComboBox:hover {
+    border: 2px solid #1a5276;
+    background-color: #f8f9fa;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 35px;
+    background: transparent;
+}
+
+QComboBox::down-arrow {
+    image: url(down_arrow.png);
+    width: 14px;
+    height: 14px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    selection-background-color: #1a5276;
+    selection-color: white;
+    padding: 8px;
+    font-weight: 500;
+}
+
+/* ========== DATE EDIT ========== */
+QDateEdit {
+    background-color: white;
+    border: 2px solid rgba(52, 152, 219, 0.5);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+QDateEdit:hover {
+    border: 2px solid #1a5276;
+    background-color: #f8f9fa;
+}
+
+QDateEdit::drop-down {
+    border: none;
+    width: 35px;
+}
+
+/* ========== TABLE WIDGET ========== */
+QTableWidget {
+    background-color: white;
+    border: 2px solid #1a5276;
+    border-radius: 12px;
+    gridline-color: rgba(209, 216, 224, 0.5);
+    font-size: 13px;
+    selection-background-color: #1a5276;
+    selection-color: white;
+    alternate-background-color: #f8f9fa;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+QTableWidget::item {
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(236, 240, 241, 0.8);
+    font-weight: 500;
+}
+
+QTableWidget::item:selected {
+    background-color: #1a5276;
+    color: white;
+    font-weight: 600;
+}
+
+QHeaderView::section {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #1e3799, stop:1 #4a69bd);
+    color: white;
+    padding: 15px 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.5px;
+}
+
+QHeaderView::section:last {
+    border-right: none;
+}
+
+QTableCornerButton::section {
+    background: #1e3799;
+    border: none;
+    border-radius: 12px 0 0 0;
+}
+
+/* ========== BOUTONS ========== */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #1e3799, stop:1 #0c2461);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-weight: 700;
+    font-size: 13px;
+    min-width: 100px;
+    min-height: 40px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #4a69bd, stop:1 #1e3799);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 82, 118, 0.3);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #0c2461, stop:1 #1e3799);
+    padding-top: 13px;
+    padding-bottom: 11px;
+    transform: translateY(0);
+}
+
+/* Bouton ANNULER */
+QPushButton#pushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #95a5a6, stop:1 #7f8c8d);
+}
+
+QPushButton#pushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #bdc3c7, stop:1 #95a5a6);
+}
+
+/* Bouton VALIDER */
+QPushButton#pushButton_2 {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #27ae60, stop:1 #219653);
+}
+
+QPushButton#pushButton_2:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #2ecc71, stop:1 #27ae60);
+}
+
+/* Boutons d'action */
+QPushButton#pushButton_3,
+QPushButton#pushButton_4,
+QPushButton#pushButton_5 {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #3498db, stop:1 #2980b9);
+}
+
+QPushButton#pushButton_3:hover,
+QPushButton#pushButton_4:hover,
+QPushButton#pushButton_5:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #5dade2, stop:1 #3498db);
+}
+
+/* Bouton MODIFIER */
+QPushButton#pushButton_6 {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f39c12, stop:1 #d68910);
+}
+
+QPushButton#pushButton_6:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f1c40f, stop:1 #f39c12);
+}
+
+/* Bouton SUPPRIMER */
+QPushButton#pushButton_7 {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #e74c3c, stop:1 #c0392b);
+}
+
+QPushButton#pushButton_7:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ff7979, stop:1 #e74c3c);
+}
+
+/* ========== MENUBAR ========== */
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #0c2461, stop:1 #1e3799);
+    color: white;
+    font-weight: 700;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 3px solid #4a69bd;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+QMenuBar::item:selected {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid white;
+}
+
+QMenuBar::item:pressed {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+QMenu {
+    background-color: white;
+    border: 2px solid #1a5276;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+QMenu::item {
+    background-color: transparent;
+    padding: 10px 30px 10px 25px;
+    margin: 3px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+QMenu::item:selected {
+    background-color: #1a5276;
+    color: white;
+    font-weight: 600;
+}
+
+/* ========== STATUSBAR ========== */
+QStatusBar {
+    background: rgba(12, 36, 97, 0.9);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px;
+    border-top: 2px solid #4a69bd;
+}
+
+/* ========== SCROLLBARS ========== */
+QScrollBar:vertical {
+    background-color: rgba(236, 240, 241, 0.3);
+    width: 14px;
+    border-radius: 7px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #3498db, stop:1 #2980b9);
+    border-radius: 7px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #5dade2, stop:1 #3498db);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: rgba(236, 240, 241, 0.3);
+    height: 14px;
+    border-radius: 7px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #3498db, stop:1 #2980b9);
+    border-radius: 7px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #5dade2, stop:1 #3498db);
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* ========== EFFETS SPÉCIAUX ========== */
+/* Animation pour les boutons */
+QPushButton {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ombre pour les groupbox */
+QGroupBox {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet de réflexion pour les boutons */
+QPushButton:hover {
+    background-image: url('reflection.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+/* Effet de rayon pour les inputs focus */
+QLineEdit:focus, QComboBox:focus, QDateEdit:focus {
+    animation: focusGlow 1.5s infinite alternate;
+}
+
+@keyframes focusGlow {
+    from { box-shadow: 0 0 5px rgba(26, 82, 118, 0.3); }
+    to { box-shadow: 0 0 15px rgba(26, 82, 118, 0.6); }
+}
+
+/* Séparateurs décoratifs */
+QFrame {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 transparent, stop:0.5 #3498db, stop:1 transparent);
+    height: 2px;
+}
+
+/* Icônes pour les boutons (conceptuel) */
+QPushButton#pushButton_4::before {
+    content: &quot;📄&quot;;
+    padding-right: 8px;
+}
+
+QPushButton#pushButton_5::before {
+    content: &quot;📊&quot;;
+    padding-right: 8px;
+}
+
+/* ========== RESPONSIVE ELEMENTS ========== */
+@media (max-width: 800px) {
+    QGroupBox {
+        border-radius: 10px;
+        padding-top: 15px;
+    }
+
+    QPushButton {
+        padding: 10px 15px;
+        min-width: 80px;
+        font-size: 12px;
+    }
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>360</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>50</y>
+       <width>180</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Poids (kg):</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>110</y>
+       <width>180</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>170</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Prix (kg):</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>170</y>
+       <width>180</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>230</y>
+       <width>180</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>230</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> Espèce :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>290</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Date capture:</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>290</y>
+       <width>180</width>
+       <height>40</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>450</y>
+       <width>150</width>
+       <height>64</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>✖ ANNULER</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>450</y>
+       <width>150</width>
+       <height>64</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>✓ VALIDER</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>0</y>
+      <width>651</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>551</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <column>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>POIDS</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>PRIX</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>ESPECE</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>DATE</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>200</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>🔍 Rechercher par date...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>30</y>
+       <width>161</width>
+       <height>64</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>🔎 RECHERCHER</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>30</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>📈 TRIER PAR :</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>70</y>
+       <width>191</width>
+       <height>59</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>⚓ poids(Croissant)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>⚓ Capacité (Décroissant)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>🚢 Nom (A-Z)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>🚢 Nom (Z-A)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>📅 Date (Récent)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>📅 Date (Ancien)</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>490</y>
+       <width>161</width>
+       <height>64</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>📄 EXPORT PDF</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>490</y>
+       <width>150</width>
+       <height>64</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>📊 STATISTIQUES</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>490</y>
+       <width>150</width>
+       <height>64</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>✏ MODIFIER</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>490</y>
+       <width>150</width>
+       <height>64</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>🗑 SUPPRIMER</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>1041</width>
+     <height>56</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuGESTION_DES_BATEAUX">
+    <property name="title">
+     <string>🚢 PORT FISHING MANAGEMENT</string>
+    </property>
+   </widget>
+   <addaction name="menuGESTION_DES_BATEAUX"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
